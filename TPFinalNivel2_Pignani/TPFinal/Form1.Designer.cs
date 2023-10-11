@@ -112,7 +112,7 @@ namespace TPFinal
             this.dgvTablaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaArticulos.Location = new System.Drawing.Point(145, 114);
             this.dgvTablaArticulos.Name = "dgvTablaArticulos";
-            this.dgvTablaArticulos.Size = new System.Drawing.Size(713, 348);
+            this.dgvTablaArticulos.Size = new System.Drawing.Size(649, 348);
             this.dgvTablaArticulos.TabIndex = 5;
             // 
             // pcboxImagen
@@ -120,9 +120,9 @@ namespace TPFinal
             this.pcboxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcboxImagen.Location = new System.Drawing.Point(859, 114);
+            this.pcboxImagen.Location = new System.Drawing.Point(800, 114);
             this.pcboxImagen.Name = "pcboxImagen";
-            this.pcboxImagen.Size = new System.Drawing.Size(298, 348);
+            this.pcboxImagen.Size = new System.Drawing.Size(214, 348);
             this.pcboxImagen.TabIndex = 6;
             this.pcboxImagen.TabStop = false;
             // 
@@ -158,7 +158,7 @@ namespace TPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 520);
+            this.ClientSize = new System.Drawing.Size(1018, 520);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblFiltrar);
@@ -171,6 +171,7 @@ namespace TPFinal
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormularioPrincipal";
             this.Text = "Catalogo de Articulos";
+            this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxImagen)).EndInit();
             this.ResumeLayout(false);

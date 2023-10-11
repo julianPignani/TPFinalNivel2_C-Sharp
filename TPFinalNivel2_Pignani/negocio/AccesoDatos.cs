@@ -20,8 +20,9 @@ namespace negocio
         //Constructor a instanciar para empezar la conexion a la DB
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server.\\SQLEXPRESS01; database = CATALOGO_DB; integrated security = true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS01; database= CATALOGO_DB; integrated security = true");
             comando = new SqlCommand();
+            
         }
         //Seteamos la query y le creamos la consulta
         public void setearQuery(string consulta)
@@ -43,6 +44,14 @@ namespace negocio
 
                 throw ex;
             }
+            finally
+            {
+                if(lector != null)
+                {
+                    lector.Close();
+                }
+                conexion.Close();
+            }
         }
         //metodo que va a ejecutar la query del Insert
         public void ejecutarAccion()
@@ -57,6 +66,10 @@ namespace negocio
             {
 
                 throw ex;
+            }
+            finally
+            {
+                cerrarConexion();
             }
         }
         //Metodo para recibir los parametros de la consulta
