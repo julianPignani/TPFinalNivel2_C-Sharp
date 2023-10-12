@@ -85,5 +85,13 @@ namespace TPFinal
                 cargarImagen(seleccionado.ImagenUrl);
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo agregarArticulo = new frmAltaArticulo();
+            agregarArticulo.ShowDialog();
+            cargar();
+            pcboxImagen.SizeMode = PictureBoxSizeMode.Zoom;
+        }
     }
 }
