@@ -39,11 +39,11 @@ namespace negocio
 
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)lector["IdMarca"];
-                    aux.Marca.Descripcion = (string)lector["Descripcion"];
+                    aux.Marca.Descripcion = (string)lector["Marca"];
 
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)lector["IdCategoria"];
-                    aux.Categoria.Descripcion = (string)lector["Descripcion"];
+                    aux.Categoria.Descripcion = (string)lector["Categoria"];
 
                     //Validamos la urlImagen por si esta null (Sirve para cualquier columna que no puede ser null)
                     if (!(lector["ImagenUrl"] is DBNull)) //si no es null

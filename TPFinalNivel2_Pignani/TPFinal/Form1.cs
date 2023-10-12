@@ -19,6 +19,7 @@ namespace TPFinal
         public FormularioPrincipal()
         {
             InitializeComponent();
+            pcboxImagen.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
@@ -67,6 +68,15 @@ namespace TPFinal
             {
 
                 pcboxImagen.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
+            }
+        }
+        //Mostramos la imagen seleccionada
+        private void dgvTablaArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvTablaArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.ImagenUrl);
             }
         }
     }

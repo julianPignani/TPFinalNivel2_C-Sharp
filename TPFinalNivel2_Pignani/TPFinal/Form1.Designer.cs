@@ -114,6 +114,7 @@ namespace TPFinal
             this.dgvTablaArticulos.Name = "dgvTablaArticulos";
             this.dgvTablaArticulos.Size = new System.Drawing.Size(649, 348);
             this.dgvTablaArticulos.TabIndex = 5;
+            this.dgvTablaArticulos.SelectionChanged += new System.EventHandler(this.dgvTablaArticulos_SelectionChanged);
             // 
             // pcboxImagen
             // 
