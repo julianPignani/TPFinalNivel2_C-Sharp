@@ -112,7 +112,7 @@ namespace TPFinal
             this.dgvTablaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaArticulos.Location = new System.Drawing.Point(145, 114);
             this.dgvTablaArticulos.Name = "dgvTablaArticulos";
-            this.dgvTablaArticulos.Size = new System.Drawing.Size(649, 348);
+            this.dgvTablaArticulos.Size = new System.Drawing.Size(640, 348);
             this.dgvTablaArticulos.TabIndex = 5;
             this.dgvTablaArticulos.SelectionChanged += new System.EventHandler(this.dgvTablaArticulos_SelectionChanged);
             // 
@@ -121,9 +121,9 @@ namespace TPFinal
             this.pcboxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcboxImagen.Location = new System.Drawing.Point(800, 114);
+            this.pcboxImagen.Location = new System.Drawing.Point(791, 114);
             this.pcboxImagen.Name = "pcboxImagen";
-            this.pcboxImagen.Size = new System.Drawing.Size(214, 348);
+            this.pcboxImagen.Size = new System.Drawing.Size(240, 348);
             this.pcboxImagen.TabIndex = 6;
             this.pcboxImagen.TabStop = false;
             // 
@@ -159,7 +159,7 @@ namespace TPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 520);
+            this.ClientSize = new System.Drawing.Size(1035, 520);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblFiltrar);

@@ -21,5 +21,7 @@ namespace dominio
         public string ImagenUrl { get; set; }
         public decimal Precio { get; set; }
 
+
+
     }
 }

@@ -35,6 +35,12 @@ namespace TPFinal
             try
             {
                 listaArticulo = negocio.listar();
+                // Formatear el precio en la lista de artículos
+                foreach (var articulo in listaArticulo)
+                {
+                    articulo.Precio = Math.Round(articulo.Precio, 2);
+
+                }
                 dgvTablaArticulos.DataSource = listaArticulo;
                 ocultarColumna();
                 if(listaArticulo[0].ImagenUrl != null)
