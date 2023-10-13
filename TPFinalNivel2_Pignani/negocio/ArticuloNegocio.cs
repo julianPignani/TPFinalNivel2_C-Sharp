@@ -98,6 +98,36 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+        //Metodo para modificar
+        public void modificar(Articulo existente)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearQuery("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, ImagenUrl = @imagenUrl, Precio = @precio where id = @id");
+                datos.setearParametros("@codigo", existente.Codigo);
+                datos.setearParametros("@nombre", existente.Nombre);
+                datos.setearParametros("@descripcion", existente.Descripcion);
+                datos.setearParametros("@idMarca", existente.Marca.Id);
+                datos.setearParametros("@idCategoria", existente.Categoria.Id);
+                datos.setearParametros("@imagenUrl", existente.ImagenUrl);
+                datos.setearParametros("@precio", existente.Precio);
+                datos.setearParametros("@id", existente.Id);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 
 

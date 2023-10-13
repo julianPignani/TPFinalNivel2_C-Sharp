@@ -17,12 +17,25 @@ namespace TPFinal
     {
         //Instanciamos la clase Articulo
         private Articulo articulo = null;
+
+        //Si tocamos el btnAceptar, lee este constructor
         public frmAltaArticulo()
         {
             InitializeComponent();
             pcboxAltaArticulo.SizeMode = PictureBoxSizeMode.Zoom;
             // Establece la posición de inicio en el centro de la pantalla
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        //Si tocamos el btnModificar, lee este constructor
+        public frmAltaArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            pcboxAltaArticulo.SizeMode = PictureBoxSizeMode.Zoom;
+            // Establece la posición de inicio en el centro de la pantalla
+            this.StartPosition = FormStartPosition.CenterScreen;
+            Text = "Modificar Articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -36,21 +49,31 @@ namespace TPFinal
             
             try
             {
-                if (articulo == null)
-                    articulo = new Articulo();
+                if (articulo == null) //Si el usuario oprime agregar y el articulo es == null, significa que tenemos que crear un nuevo articulo.(sino, lo que hace es modificar)
+                    articulo = new Articulo(); //instanciamos la clase para crear el articulo.
+
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
-
                 //capturamos lo que viene en el comboBox
                 articulo.Marca = (Marca)cmboxMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cmboxCategoria.SelectedItem;
-
                 articulo.ImagenUrl = txtImagenUrl.Text;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
 
-                nuevo.agregar(articulo);
-                DialogResult dialogResult = MessageBox.Show("Artículo Agregado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Validamos los metodos agregar o modificar
+                //Si vos tenes un (id != 0) significa que estamos modificando, porque ya existe.
+                //Si el (id == 0) significa que no existe, entonces agregamos el articulo.
+                if(articulo.Id != 0)
+                {
+                    nuevo.modificar(articulo);
+                    DialogResult dialogResultModificar = MessageBox.Show("Artículo Modificado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    nuevo.agregar(articulo);
+                    DialogResult dialogResultAgrefar = MessageBox.Show("Artículo Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 Close();
             }
@@ -69,13 +92,27 @@ namespace TPFinal
 
             try
             {
-                //LLamamos al metodo listar de la clase MarcaNegocio y CategoriaNegocio para que nos traiga los elementos y los muestre en el desplegable.
+                //LLamamos al metodo listar de la clase MarcaNegocio y CategoriaNegocio para que nos traiga los elementos y los muestre en el desplegable y nos sirva para luego
+                //poder pre inscrirlos cuando vayamos a modificar.
                 cmboxMarca.DataSource = marcaNegocio.listar();
-                cmboxMarca.ValueMember = "Id";
-                cmboxMarca.DisplayMember = "Descripcion";
+                cmboxMarca.ValueMember = "Id"; //clave
+                cmboxMarca.DisplayMember = "Descripcion"; //valor
                 cmboxCategoria.DataSource = categoriaNegocio.listar();
-                cmboxCategoria.ValueMember = "Id";
-                cmboxCategoria.DisplayMember = "Descripcion";
+                cmboxCategoria.ValueMember = "Id"; //clave
+                cmboxCategoria.DisplayMember = "Descripcion"; //valor
+
+                //Validamos si el usuario oprimio btnCargar o btnModificar
+                if(articulo != null)//si es diferente de null, significa que vamos a modificar, entonces pre inscribimos los datos del articulo seleccionado.
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    cmboxMarca.SelectedValue = articulo.Marca.Id; //Con esto pre inscribimos los valores dentro del combobox
+                    cmboxCategoria.SelectedValue = articulo.Categoria.Id; //que seria, reutilizando los valores clave-valor
+                    txtImagenUrl.Text = articulo.ImagenUrl;
+                    cargarImagen(articulo.ImagenUrl); //usamos el metodo ya creado anteriormente, para que nos lea la url apenas abre la ventana
+                    txtPrecio.Text = articulo.Precio.ToString();
+                }
             }
             catch (Exception ex)
             {

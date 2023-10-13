@@ -16,6 +16,13 @@ namespace TPFinal
     {
         //Creamos una lista para ir mostrando las imagenes.
         private List<Articulo> listaArticulo;
+
+        //creamos un constructor de btnModificar
+        /*public btnModificar()
+        {
+            InitializeComponent();
+        }*/
+
         public FormularioPrincipal()
         {
             InitializeComponent();
@@ -94,6 +101,16 @@ namespace TPFinal
             alta.ShowDialog(); //para que no me deje salir de la ventana hasta terminar de cargar o oprimir salir.
             cargar();
            
+        }
+
+        //Evento modificar, selecionamos el Articulo y modificamos.
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }
