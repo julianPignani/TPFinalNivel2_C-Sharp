@@ -52,11 +52,8 @@ namespace TPFinal
                 }
                 dgvTablaArticulos.DataSource = listaArticulo;
                 ocultarColumna();
-                if(listaArticulo[0].ImagenUrl != null)
-                {
-                    cargarImagen(listaArticulo[0].ImagenUrl);
-                }
-                    
+                cargarImagen(listaArticulo[0].ImagenUrl);
+                
             }
             catch (Exception ex)
             {
@@ -79,10 +76,10 @@ namespace TPFinal
             {
                 pcboxImagen.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 pcboxImagen.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
+
             }
         }
         //Mostramos la imagen seleccionada

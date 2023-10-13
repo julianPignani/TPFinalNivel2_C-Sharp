@@ -138,7 +138,7 @@ namespace TPFinal
             {
 
                 pcboxAltaArticulo.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
-                MessageBox.Show(ex.ToString());
+                
             }
         }
     }
