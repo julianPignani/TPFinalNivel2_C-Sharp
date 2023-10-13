@@ -50,7 +50,7 @@ namespace TPFinal
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
 
                 nuevo.agregar(articulo);
-                MessageBox.Show("Artículo Agregado");
+                DialogResult dialogResult = MessageBox.Show("Artículo Agregado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Close();
             }

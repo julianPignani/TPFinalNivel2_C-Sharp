@@ -57,7 +57,7 @@ namespace TPFinal
             this.lblCodigo.Location = new System.Drawing.Point(48, 94);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(71, 19);
-            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.TabIndex = 10;
             this.lblCodigo.Text = "Codigo:";
             // 
             // lblNombre
@@ -67,7 +67,7 @@ namespace TPFinal
             this.lblNombre.Location = new System.Drawing.Point(43, 134);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(76, 19);
-            this.lblNombre.TabIndex = 1;
+            this.lblNombre.TabIndex = 11;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblDescripcion
@@ -77,7 +77,7 @@ namespace TPFinal
             this.lblDescripcion.Location = new System.Drawing.Point(12, 174);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(107, 19);
-            this.lblDescripcion.TabIndex = 2;
+            this.lblDescripcion.TabIndex = 12;
             this.lblDescripcion.Text = "Descripcion:";
             // 
             // lblUrlImagen
@@ -87,7 +87,7 @@ namespace TPFinal
             this.lblUrlImagen.Location = new System.Drawing.Point(22, 298);
             this.lblUrlImagen.Name = "lblUrlImagen";
             this.lblUrlImagen.Size = new System.Drawing.Size(97, 19);
-            this.lblUrlImagen.TabIndex = 3;
+            this.lblUrlImagen.TabIndex = 11;
             this.lblUrlImagen.Text = "Url Imagen:";
             // 
             // lblPrecio
@@ -97,7 +97,7 @@ namespace TPFinal
             this.lblPrecio.Location = new System.Drawing.Point(55, 339);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(64, 19);
-            this.lblPrecio.TabIndex = 4;
+            this.lblPrecio.TabIndex = 10;
             this.lblPrecio.Text = "Precio:";
             // 
             // lblMarca
@@ -107,7 +107,7 @@ namespace TPFinal
             this.lblMarca.Location = new System.Drawing.Point(58, 215);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(61, 19);
-            this.lblMarca.TabIndex = 5;
+            this.lblMarca.TabIndex = 13;
             this.lblMarca.Text = "Marca:";
             // 
             // lblCategoria
@@ -117,7 +117,7 @@ namespace TPFinal
             this.lblCategoria.Location = new System.Drawing.Point(30, 256);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(89, 19);
-            this.lblCategoria.TabIndex = 6;
+            this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoria:";
             // 
             // txtCodigo
@@ -126,7 +126,7 @@ namespace TPFinal
             this.txtCodigo.Location = new System.Drawing.Point(125, 90);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(175, 26);
-            this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.TabIndex = 1;
             // 
             // txtNombre
             // 
@@ -134,7 +134,7 @@ namespace TPFinal
             this.txtNombre.Location = new System.Drawing.Point(125, 134);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(175, 26);
-            this.txtNombre.TabIndex = 8;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtDescripcion
             // 
@@ -142,7 +142,7 @@ namespace TPFinal
             this.txtDescripcion.Location = new System.Drawing.Point(125, 174);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(175, 26);
-            this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtImagenUrl
             // 
@@ -150,7 +150,7 @@ namespace TPFinal
             this.txtImagenUrl.Location = new System.Drawing.Point(125, 294);
             this.txtImagenUrl.Name = "txtImagenUrl";
             this.txtImagenUrl.Size = new System.Drawing.Size(175, 26);
-            this.txtImagenUrl.TabIndex = 10;
+            this.txtImagenUrl.TabIndex = 6;
             this.txtImagenUrl.Leave += new System.EventHandler(this.txtImagenUrl_Leave);
             // 
             // txtPrecio
@@ -159,7 +159,7 @@ namespace TPFinal
             this.txtPrecio.Location = new System.Drawing.Point(125, 335);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(175, 26);
-            this.txtPrecio.TabIndex = 11;
+            this.txtPrecio.TabIndex = 7;
             // 
             // cmboxMarca
             // 
@@ -168,7 +168,7 @@ namespace TPFinal
             this.cmboxMarca.Location = new System.Drawing.Point(125, 215);
             this.cmboxMarca.Name = "cmboxMarca";
             this.cmboxMarca.Size = new System.Drawing.Size(175, 28);
-            this.cmboxMarca.TabIndex = 12;
+            this.cmboxMarca.TabIndex = 4;
             // 
             // cmboxCategoria
             // 
@@ -177,7 +177,7 @@ namespace TPFinal
             this.cmboxCategoria.Location = new System.Drawing.Point(125, 256);
             this.cmboxCategoria.Name = "cmboxCategoria";
             this.cmboxCategoria.Size = new System.Drawing.Size(175, 28);
-            this.cmboxCategoria.TabIndex = 13;
+            this.cmboxCategoria.TabIndex = 5;
             // 
             // pcboxAltaArticulo
             // 
@@ -196,7 +196,7 @@ namespace TPFinal
             this.btnAceptar.Location = new System.Drawing.Point(157, 379);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(113, 42);
-            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "    Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -210,7 +210,7 @@ namespace TPFinal
             this.btnCancelar.Location = new System.Drawing.Point(306, 379);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 42);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "      Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -237,6 +237,7 @@ namespace TPFinal
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmAltaArticulo";
             this.Text = "Alta de Articulo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);

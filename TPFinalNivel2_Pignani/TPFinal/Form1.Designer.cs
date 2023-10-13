@@ -52,7 +52,7 @@ namespace TPFinal
             this.lblTitulo.Location = new System.Drawing.Point(408, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(347, 36);
-            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.TabIndex = 8;
             this.lblTitulo.Text = "Catálogo de Articulos";
             // 
             // btnAgregar
@@ -64,7 +64,7 @@ namespace TPFinal
             this.btnAgregar.Location = new System.Drawing.Point(23, 161);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(116, 39);
-            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "     Agregar ";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -78,7 +78,7 @@ namespace TPFinal
             this.btnModificar.Location = new System.Drawing.Point(23, 220);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(116, 39);
-            this.btnModificar.TabIndex = 2;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "     Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +91,7 @@ namespace TPFinal
             this.btnEliminar.Location = new System.Drawing.Point(23, 285);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(116, 39);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "     Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -104,7 +104,7 @@ namespace TPFinal
             this.btnVerDetalle.Location = new System.Drawing.Point(23, 350);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(116, 39);
-            this.btnVerDetalle.TabIndex = 4;
+            this.btnVerDetalle.TabIndex = 6;
             this.btnVerDetalle.Text = "     Ver Detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +114,7 @@ namespace TPFinal
             this.dgvTablaArticulos.Location = new System.Drawing.Point(145, 114);
             this.dgvTablaArticulos.Name = "dgvTablaArticulos";
             this.dgvTablaArticulos.Size = new System.Drawing.Size(640, 348);
-            this.dgvTablaArticulos.TabIndex = 5;
+            this.dgvTablaArticulos.TabIndex = 1;
             this.dgvTablaArticulos.SelectionChanged += new System.EventHandler(this.dgvTablaArticulos_SelectionChanged);
             // 
             // pcboxImagen
@@ -144,7 +144,7 @@ namespace TPFinal
             this.textBox1.Location = new System.Drawing.Point(192, 82);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(248, 26);
-            this.textBox1.TabIndex = 8;
+            this.textBox1.TabIndex = 2;
             // 
             // btnBuscar
             // 
@@ -152,7 +152,7 @@ namespace TPFinal
             this.btnBuscar.Location = new System.Drawing.Point(446, 82);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(69, 26);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -160,6 +160,7 @@ namespace TPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1035, 520);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
@@ -171,6 +172,8 @@ namespace TPFinal
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblTitulo);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormularioPrincipal";
             this.Text = "Catalogo de Articulos";
             this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
