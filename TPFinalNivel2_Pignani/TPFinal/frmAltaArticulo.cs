@@ -35,7 +35,8 @@ namespace TPFinal
             pcboxAltaArticulo.SizeMode = PictureBoxSizeMode.Zoom;
             // Establece la posición de inicio en el centro de la pantalla
             this.StartPosition = FormStartPosition.CenterScreen;
-            Text = "Modificar Articulo";
+            Text = "Modificar Artículo";
+            lblTitulo.Text = "Modificar Artículo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

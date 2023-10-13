@@ -49,11 +49,12 @@ namespace TPFinal
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTitulo.Location = new System.Drawing.Point(408, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(347, 36);
             this.lblTitulo.TabIndex = 8;
-            this.lblTitulo.Text = "Catálogo de Articulos";
+            this.lblTitulo.Text = "Catálogo de Artículos";
             // 
             // btnAgregar
             // 
@@ -125,7 +126,7 @@ namespace TPFinal
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcboxImagen.Location = new System.Drawing.Point(791, 114);
             this.pcboxImagen.Name = "pcboxImagen";
-            this.pcboxImagen.Size = new System.Drawing.Size(240, 348);
+            this.pcboxImagen.Size = new System.Drawing.Size(246, 348);
             this.pcboxImagen.TabIndex = 6;
             this.pcboxImagen.TabStop = false;
             // 
@@ -141,7 +142,7 @@ namespace TPFinal
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(192, 82);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(248, 26);
@@ -162,7 +163,7 @@ namespace TPFinal
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1035, 520);
+            this.ClientSize = new System.Drawing.Size(1041, 504);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblFiltrar);
