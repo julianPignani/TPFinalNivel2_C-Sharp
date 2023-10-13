@@ -44,14 +44,7 @@ namespace negocio
 
                 throw ex;
             }
-            finally
-            {
-                if(lector != null)
-                {
-                    lector.Close();
-                }
-                conexion.Close();
-            }
+
         }
         //metodo que va a ejecutar la query del Insert
         public void ejecutarAccion()

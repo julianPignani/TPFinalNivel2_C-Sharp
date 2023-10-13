@@ -20,6 +20,8 @@ namespace TPFinal
         {
             InitializeComponent();
             pcboxImagen.SizeMode = PictureBoxSizeMode.Zoom;
+            // Establece la posición de inicio en el centro de la pantalla
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
@@ -88,10 +90,10 @@ namespace TPFinal
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaArticulo agregarArticulo = new frmAltaArticulo();
-            agregarArticulo.ShowDialog();
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog(); //para que no me deje salir de la ventana hasta terminar de cargar o oprimir salir.
             cargar();
-            pcboxImagen.SizeMode = PictureBoxSizeMode.Zoom;
+           
         }
     }
 }

@@ -44,10 +44,10 @@ namespace TPFinal
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cmboxMarca = new System.Windows.Forms.ComboBox();
             this.cmboxCategoria = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcboxAltaArticulo = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxAltaArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -151,6 +151,7 @@ namespace TPFinal
             this.txtImagenUrl.Name = "txtImagenUrl";
             this.txtImagenUrl.Size = new System.Drawing.Size(175, 26);
             this.txtImagenUrl.TabIndex = 10;
+            this.txtImagenUrl.Leave += new System.EventHandler(this.txtImagenUrl_Leave);
             // 
             // txtPrecio
             // 
@@ -178,13 +179,13 @@ namespace TPFinal
             this.cmboxCategoria.Size = new System.Drawing.Size(175, 28);
             this.cmboxCategoria.TabIndex = 13;
             // 
-            // pictureBox1
+            // pcboxAltaArticulo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(306, 90);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 271);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.pcboxAltaArticulo.Location = new System.Drawing.Point(306, 90);
+            this.pcboxAltaArticulo.Name = "pcboxAltaArticulo";
+            this.pcboxAltaArticulo.Size = new System.Drawing.Size(257, 271);
+            this.pcboxAltaArticulo.TabIndex = 14;
+            this.pcboxAltaArticulo.TabStop = false;
             // 
             // btnAceptar
             // 
@@ -198,6 +199,7 @@ namespace TPFinal
             this.btnAceptar.TabIndex = 15;
             this.btnAceptar.Text = "    Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -211,6 +213,7 @@ namespace TPFinal
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "      Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmAltaArticulo
             // 
@@ -219,7 +222,7 @@ namespace TPFinal
             this.ClientSize = new System.Drawing.Size(566, 433);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pcboxAltaArticulo);
             this.Controls.Add(this.cmboxCategoria);
             this.Controls.Add(this.cmboxMarca);
             this.Controls.Add(this.txtPrecio);
@@ -236,7 +239,8 @@ namespace TPFinal
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmAltaArticulo";
             this.Text = "Alta de Articulo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxAltaArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +262,7 @@ namespace TPFinal
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.ComboBox cmboxMarca;
         private System.Windows.Forms.ComboBox cmboxCategoria;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcboxAltaArticulo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
     }
