@@ -85,6 +85,7 @@ namespace TPFinal
         //Mostramos la imagen seleccionada
         private void dgvTablaArticulos_SelectionChanged(object sender, EventArgs e)
         {
+            //Validamos para evitar romper la busqueda por filtro cuando borramos lo que escribimos.
             if(dgvTablaArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
@@ -131,6 +132,32 @@ namespace TPFinal
             {
 
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        //Evento del txtFiltrar para un filtro rapido a medida que vayamos escribiendo
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            try
+            {
+                string filtro = txtFiltrar.Text;
+                if (filtro != "")
+                {
+                    listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+                }
+                else
+                {
+                    listaFiltrada = listaArticulo;
+                }
+
+                dgvTablaArticulos.DataSource = null;
+                dgvTablaArticulos.DataSource = listaFiltrada;
+                ocultarColumna();
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

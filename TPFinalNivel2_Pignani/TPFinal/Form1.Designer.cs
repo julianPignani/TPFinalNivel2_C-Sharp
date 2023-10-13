@@ -38,7 +38,7 @@ namespace TPFinal
             this.dgvTablaArticulos = new System.Windows.Forms.DataGridView();
             this.pcboxImagen = new System.Windows.Forms.PictureBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxImagen)).BeginInit();
@@ -141,13 +141,15 @@ namespace TPFinal
             this.lblFiltrar.TabIndex = 7;
             this.lblFiltrar.Text = "Filtro:";
             // 
-            // textBox1
+            // txtFiltrar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(192, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtFiltrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltrar.Location = new System.Drawing.Point(192, 82);
+            this.txtFiltrar.Name = "txtFiltrar";
+            this.txtFiltrar.Size = new System.Drawing.Size(248, 26);
+            this.txtFiltrar.TabIndex = 2;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
+
             // 
             // btnBuscar
             // 
@@ -166,7 +168,7 @@ namespace TPFinal
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1041, 504);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.lblFiltrar);
             this.Controls.Add(this.pcboxImagen);
             this.Controls.Add(this.dgvTablaArticulos);
@@ -197,7 +199,7 @@ namespace TPFinal
         private System.Windows.Forms.DataGridView dgvTablaArticulos;
         private System.Windows.Forms.PictureBox pcboxImagen;
         private System.Windows.Forms.Label lblFiltrar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.Button btnBuscar;
     }
 }
