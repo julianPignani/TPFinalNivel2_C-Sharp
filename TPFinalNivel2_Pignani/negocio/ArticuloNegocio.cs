@@ -128,6 +128,28 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        //Creamos el metodo para Eliminar un Artículo
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearQuery("DELETE FROM ARTICULOS where id = @id");
+                datos.setearParametros("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex )
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 
 

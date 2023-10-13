@@ -95,6 +95,7 @@ namespace TPFinal
             }
         }
 
+        //Eventoo Agregar
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAltaArticulo alta = new frmAltaArticulo();
@@ -111,6 +112,29 @@ namespace TPFinal
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
             cargar();
+        }
+        //Evento eliminar
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Seguro que deseas Eliminar el artículo?", "Advertencia!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                //Validamos la accion por si el usuario nos responde no.
+                if(dialogResult == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+                    articulo.eliminar(seleccionado.Id);
+                    cargar(); //para que vuelva a actualizar la tabla despues de eliminar
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
