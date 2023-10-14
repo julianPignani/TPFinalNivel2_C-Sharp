@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 using System.Configuration;
+using System.IO;
 
 namespace TPFinal
 {
@@ -17,6 +18,9 @@ namespace TPFinal
     {
         //Instanciamos la clase Articulo
         private Articulo articulo = null;
+
+        //creamos una variable para trabajar con el archivo local
+        OpenFileDialog archivo = null;
 
         //Si tocamos el btnAceptar, lee este constructor
         public frmAltaArticulo()
@@ -75,6 +79,13 @@ namespace TPFinal
                     nuevo.agregar(articulo);
                     DialogResult dialogResultAgrefar = MessageBox.Show("Artículo Agregado Correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
+                //Guardamos la imagen si la levanto desde un archivo local
+                //Si el archivo es diferente de null y si la url no contiene https nos aseguramos de que es una imagen local
+                //Guardamos la imagen
+                if(archivo != null && !(txtImagenUrl.Text.ToUpper().Contains("HTTP")))
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+
 
                 Close();
             }
@@ -138,6 +149,20 @@ namespace TPFinal
             {
 
                 pcboxAltaArticulo.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
+                
+            }
+        }
+        //Evento para agregar una imagen desde un archivo local
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtImagenUrl.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //Guardamos la imagen en el btn aceptar
                 
             }
         }

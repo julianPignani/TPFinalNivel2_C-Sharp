@@ -48,6 +48,7 @@ namespace TPFinal
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxAltaArticulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,7 +183,7 @@ namespace TPFinal
             // 
             // pcboxAltaArticulo
             // 
-            this.pcboxAltaArticulo.Location = new System.Drawing.Point(306, 90);
+            this.pcboxAltaArticulo.Location = new System.Drawing.Point(336, 90);
             this.pcboxAltaArticulo.Name = "pcboxAltaArticulo";
             this.pcboxAltaArticulo.Size = new System.Drawing.Size(257, 271);
             this.pcboxAltaArticulo.TabIndex = 14;
@@ -228,11 +229,22 @@ namespace TPFinal
             this.lblTitulo.Text = "Agregar Artículo";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarImagen.Image")));
+            this.btnAgregarImagen.Location = new System.Drawing.Point(301, 294);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(29, 28);
+            this.btnAgregarImagen.TabIndex = 16;
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 433);
+            this.ClientSize = new System.Drawing.Size(598, 433);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -281,5 +293,6 @@ namespace TPFinal
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }
