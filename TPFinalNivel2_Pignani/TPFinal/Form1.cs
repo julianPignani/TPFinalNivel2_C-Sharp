@@ -160,5 +160,14 @@ namespace TPFinal
                 throw;
             }
         }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+
+            frmVerDetalle detalle = new frmVerDetalle(seleccionado);
+            detalle.ShowDialog();
+            cargar();
+        }
     }
 }
