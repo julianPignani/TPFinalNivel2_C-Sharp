@@ -142,11 +142,10 @@
   </data>
   <data name="btnAgregarImagen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACOSURBVEhL7ZVBCoAwDASLH9Kn6NGXq6/RLCisYRep6K0D
-        c2k3aSHQlkYtXTiEYzhXipo+RA8LAqq4RvSwvLl5dgotqoDdwjWtKS0qzO6nao+1qDDbDriFMNCr4ZN5
-        8BYOoUg1Uy4h11o4pLwaqj3WosJsO0CGWQw+D1Rp+eKxQw/L7881PgsEfvtwGolSDl+GiQNSuUtFAAAA
-        AElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAI5JREFUSEvtlUEKgDAMBIsf0qfo0Zerr9EsKKxhF6norQNzaTdpIdCWRi1dOIRj
+        OFeKmj5EDwsCqrhG9LC8uXl2Ci2qgN3CNa0pLSrM7qdqj7WoMNsOuIUw0Kvhk3nwFg6hSDVTLiHXWjik
+        vBqqPdaiwmw7QIZZDD4PVGn54rFDD8vvzzU+CwR++3AaiVIOX4aJA1K5S0UAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

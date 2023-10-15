@@ -191,6 +191,7 @@ namespace TPFinal
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
@@ -200,11 +201,12 @@ namespace TPFinal
             this.btnAceptar.Size = new System.Drawing.Size(113, 42);
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "    Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -214,7 +216,7 @@ namespace TPFinal
             this.btnCancelar.Size = new System.Drawing.Size(113, 42);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "      Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblTitulo
