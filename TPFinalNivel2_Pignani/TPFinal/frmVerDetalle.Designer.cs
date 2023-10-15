@@ -44,6 +44,7 @@ namespace TPFinal
             // 
             // pcboxDetalle
             // 
+            this.pcboxDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxDetalle.Location = new System.Drawing.Point(12, 63);
             this.pcboxDetalle.Name = "pcboxDetalle";
             this.pcboxDetalle.Size = new System.Drawing.Size(273, 306);
@@ -128,6 +129,7 @@ namespace TPFinal
             this.btnVolver.Size = new System.Drawing.Size(97, 37);
             this.btnVolver.TabIndex = 0;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblPrecio
             // 

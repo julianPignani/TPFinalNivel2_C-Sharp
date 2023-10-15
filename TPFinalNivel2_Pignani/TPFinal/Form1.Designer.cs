@@ -117,6 +117,7 @@ namespace TPFinal
             // 
             // dgvTablaArticulos
             // 
+            this.dgvTablaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvTablaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaArticulos.Location = new System.Drawing.Point(145, 114);
             this.dgvTablaArticulos.Name = "dgvTablaArticulos";
@@ -129,6 +130,7 @@ namespace TPFinal
             this.pcboxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcboxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxImagen.Location = new System.Drawing.Point(791, 114);
             this.pcboxImagen.Name = "pcboxImagen";
             this.pcboxImagen.Size = new System.Drawing.Size(246, 348);

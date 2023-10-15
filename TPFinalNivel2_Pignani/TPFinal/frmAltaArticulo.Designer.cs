@@ -183,6 +183,7 @@ namespace TPFinal
             // 
             // pcboxAltaArticulo
             // 
+            this.pcboxAltaArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxAltaArticulo.Location = new System.Drawing.Point(336, 90);
             this.pcboxAltaArticulo.Name = "pcboxAltaArticulo";
             this.pcboxAltaArticulo.Size = new System.Drawing.Size(257, 271);
