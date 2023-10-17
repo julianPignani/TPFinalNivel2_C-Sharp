@@ -44,6 +44,7 @@ namespace TPFinal
             // 
             // pcboxDetalle
             // 
+            this.pcboxDetalle.BackColor = System.Drawing.SystemColors.Window;
             this.pcboxDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxDetalle.Location = new System.Drawing.Point(12, 63);
             this.pcboxDetalle.Name = "pcboxDetalle";
@@ -61,12 +62,12 @@ namespace TPFinal
             this.lblTituloDetalle.Name = "lblTituloDetalle";
             this.lblTituloDetalle.Size = new System.Drawing.Size(226, 28);
             this.lblTituloDetalle.TabIndex = 1;
-            this.lblTituloDetalle.Text = "Detalle del Articulo";
+            this.lblTituloDetalle.Text = "Detalle del Artículo";
             this.lblTituloDetalle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtDetalleNombre
             // 
-            this.txtDetalleNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtDetalleNombre.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtDetalleNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalleNombre.Location = new System.Drawing.Point(289, 77);
             this.txtDetalleNombre.Name = "txtDetalleNombre";
@@ -76,7 +77,7 @@ namespace TPFinal
             // 
             // txtDetallePrecio
             // 
-            this.txtDetallePrecio.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtDetallePrecio.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtDetallePrecio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetallePrecio.Location = new System.Drawing.Point(313, 323);
             this.txtDetallePrecio.Name = "txtDetallePrecio";
@@ -87,7 +88,7 @@ namespace TPFinal
             // 
             // cboxMarca
             // 
-            this.cboxMarca.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cboxMarca.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cboxMarca.Enabled = false;
             this.cboxMarca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxMarca.FormattingEnabled = true;
@@ -98,7 +99,7 @@ namespace TPFinal
             // 
             // cboxCategoria
             // 
-            this.cboxCategoria.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cboxCategoria.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cboxCategoria.Enabled = false;
             this.cboxCategoria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCategoria.FormattingEnabled = true;
@@ -109,7 +110,7 @@ namespace TPFinal
             // 
             // txtRichDescripcion
             // 
-            this.txtRichDescripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtRichDescripcion.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.txtRichDescripcion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRichDescripcion.Location = new System.Drawing.Point(289, 216);
             this.txtRichDescripcion.Name = "txtRichDescripcion";
@@ -120,7 +121,7 @@ namespace TPFinal
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnVolver.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
@@ -134,7 +135,7 @@ namespace TPFinal
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblPrecio.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPrecio.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(289, 323);
@@ -147,6 +148,7 @@ namespace TPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(501, 415);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.btnVolver);

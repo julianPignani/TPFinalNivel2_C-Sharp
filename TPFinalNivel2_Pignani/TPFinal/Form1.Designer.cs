@@ -57,7 +57,7 @@ namespace TPFinal
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
@@ -72,7 +72,7 @@ namespace TPFinal
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnModificar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
@@ -87,7 +87,7 @@ namespace TPFinal
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
@@ -102,7 +102,7 @@ namespace TPFinal
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnVerDetalle.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnVerDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerDetalle.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalle.Image = ((System.Drawing.Image)(resources.GetObject("btnVerDetalle.Image")));
@@ -117,6 +117,7 @@ namespace TPFinal
             // 
             // dgvTablaArticulos
             // 
+            this.dgvTablaArticulos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvTablaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvTablaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaArticulos.Location = new System.Drawing.Point(145, 114);
@@ -130,6 +131,7 @@ namespace TPFinal
             this.pcboxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcboxImagen.BackColor = System.Drawing.SystemColors.Window;
             this.pcboxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxImagen.Location = new System.Drawing.Point(791, 114);
             this.pcboxImagen.Name = "pcboxImagen";
@@ -160,7 +162,7 @@ namespace TPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1041, 504);
             this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.lblFiltrar);

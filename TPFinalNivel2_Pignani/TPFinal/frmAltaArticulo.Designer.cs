@@ -183,6 +183,7 @@ namespace TPFinal
             // 
             // pcboxAltaArticulo
             // 
+            this.pcboxAltaArticulo.BackColor = System.Drawing.SystemColors.Window;
             this.pcboxAltaArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcboxAltaArticulo.Location = new System.Drawing.Point(336, 90);
             this.pcboxAltaArticulo.Name = "pcboxAltaArticulo";
@@ -192,7 +193,7 @@ namespace TPFinal
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
@@ -207,7 +208,7 @@ namespace TPFinal
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -234,18 +235,20 @@ namespace TPFinal
             // 
             // btnAgregarImagen
             // 
+            this.btnAgregarImagen.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAgregarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarImagen.Image")));
             this.btnAgregarImagen.Location = new System.Drawing.Point(301, 294);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(29, 28);
             this.btnAgregarImagen.TabIndex = 16;
-            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.UseVisualStyleBackColor = false;
             this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(604, 433);
             this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.lblTitulo);

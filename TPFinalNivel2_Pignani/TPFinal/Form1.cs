@@ -105,11 +105,29 @@ namespace TPFinal
         //Evento modificar, selecionamos el Articulo y modificamos.
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+            try
+            {
+                //Validamos que la tabla esté con un articulo seleccionado sino mostramos el msj
+                if(dgvTablaArticulos.CurrentRow != null)
+                {
+                    Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
 
-            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+                    frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+                    modificar.ShowDialog();
+                    cargar();
+
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona el artículo que deseas modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
         //Evento eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -118,14 +136,22 @@ namespace TPFinal
             Articulo seleccionado;
             try
             {
-                DialogResult dialogResult = MessageBox.Show("¿Seguro que deseas Eliminar el artículo?", "Advertencia!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                //Validamos la accion por si el usuario nos responde no.
-                if(dialogResult == DialogResult.Yes)
+                //Validamos que la tabla tenga un articulo seleccionado.
+                if(dgvTablaArticulos.CurrentRow != null)
                 {
-                    seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
-                    articulo.eliminar(seleccionado.Id);
-                    cargar(); //para que vuelva a actualizar la tabla despues de eliminar
+                     DialogResult dialogResult = MessageBox.Show("¿Seguro que deseas Eliminar el artículo?", "Advertencia!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                     //Validamos la accion por si el usuario nos responde no.
+                     if(dialogResult == DialogResult.Yes)
+                     {
+                         seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+                         articulo.eliminar(seleccionado.Id);
+                            cargar(); //para que vuelva a actualizar la tabla despues de eliminar
+                     }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona el artículo que deseas Eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -163,11 +189,27 @@ namespace TPFinal
 
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
+            try
+            {
+                //Validamos que la tabla esté con un articulo seleccionado
+                if(dgvTablaArticulos.CurrentRow != null)
+                { 
+                    Articulo seleccionado = (Articulo)dgvTablaArticulos.CurrentRow.DataBoundItem;
 
-            frmVerDetalle detalle = new frmVerDetalle(seleccionado);
-            detalle.ShowDialog();
-            cargar();
+                    frmVerDetalle detalle = new frmVerDetalle(seleccionado);
+                    detalle.ShowDialog();
+                    cargar();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, Selecciona el artículo que deseas ver dellado!" ,"Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
